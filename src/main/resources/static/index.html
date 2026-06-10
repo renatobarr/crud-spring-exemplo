@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo basicóla de API</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Registros</h1>
+        <button id="btn-novo" class="btn-primary">+ Novo Registro</button>
+    </header>
+
+    <table id="tabela-registros">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Descrição</th>
+            <th class="acoes">Ações</th>
+        </tr>
+        </thead>
+        <tbody id="corpo-tabela">
+        <tr class="linha-vazia">
+            <td colspan="4">Carregando dados...</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="modal-form" class="modal escondido">
+    <div class="modal-conteudo">
+        <h2 id="modal-titulo">Novo Registro</h2>
+
+        <form id="formulario">
+            <input type="hidden" id="registro-id">
+
+            <div class="grupo-input">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" required placeholder="Ex: Tarefa importante">
+            </div>
+
+            <div class="grupo-input">
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" required placeholder="Ex: Detalhes da tarefa...">
+            </div>
+
+            <div class="modal-acoes">
+                <button type="button" id="btn-cancelar" class="btn-secundario">Cancelar</button>
+                <button type="submit" class="btn-primary">Salvar</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
